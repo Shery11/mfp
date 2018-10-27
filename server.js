@@ -7,6 +7,9 @@ var PORT = process.env.PORT || 8081;
 
 var mfp = require('mfp');
 
+var cors=require('./cors');
+app.use(cors.permission)
+
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
